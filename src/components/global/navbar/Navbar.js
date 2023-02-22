@@ -9,12 +9,9 @@ const Menu = () => {
       name: "Home",
       link: "/",
     },
+
     {
-      name: "News",
-      link: "/news",
-    },
-    {
-      name: "Magazine",
+      name: "Buy FOMO Magazine",
       link: "#",
     },
     {
@@ -28,8 +25,6 @@ const Menu = () => {
   return (
     <header id="header">
       <div className="container">
-
-        
         {/* nav */}
         <div className="d-none d-md-block">
           <div className="d-flex justify-content-between align-items-center">
@@ -95,9 +90,7 @@ const Menu = () => {
                     ))}
 
                     <li>
-                      <button className="nav-subscribe-btn ">
-                        Subscribe
-                      </button>
+                      <button className="nav-subscribe-btn ">Subscribe</button>
                     </li>
                   </ul>
                 </nav>
