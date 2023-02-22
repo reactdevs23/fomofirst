@@ -98,31 +98,24 @@
   height: 60px;
   margin-bottom: 10px;
 }
-.button {
-  font-family: "Roboto";
+.buttons {
+  background: #e27c23;
+  border-radius: 7px;
+  font-family: "Readex Pro";
   font-style: normal;
-  font-weight: 400;
-  font-size: 25px;
-  line-height: 120%;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 28px;
   color: #ffffff;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  text-align: center;
-  background-color: rgb(248, 205, 95);
-  padding: 10px 12px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
+  border: 1px solid #e27c23;
+  padding: 13px 47px 13px 39px;
 
-  transition: 0.3s;
-  height: 60px;
+  transition: all ease 0.5s;
+  width: 100%;
 }
 .button:hover {
-  transform: translateY(-10px);
-  background-color: rgb(248, 205, 95, 0.9);
+  background-color: white;
+  color: #e27c23;
 }
 .direction {
   font-family: "Segoe UI";

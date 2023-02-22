@@ -61,7 +61,7 @@ const Hero = () => {
               onChange={(e) => setEmail(e.target.value)}
               className={styles.input}
             />
-            <button className={styles.button} onSubmit={subsCribeFunction}>
+            <button className={styles.buttons} onSubmit={subsCribeFunction}>
               {" "}
               <HiArrowRight /> Subscribe
             </button>
