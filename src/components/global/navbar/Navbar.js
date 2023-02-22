@@ -1,15 +1,11 @@
 import React, { useState } from "react";
 import { Offcanvas } from "react-bootstrap";
 import { Link } from "react-router-dom";
+
 import "./Navbar.css";
 
 const Menu = () => {
   const menus = [
-    {
-      name: "Home",
-      link: "/",
-    },
-
     {
       name: "Buy FOMO Magazine",
       link: "#",
@@ -33,11 +29,21 @@ const Menu = () => {
             </Link>
             <nav>
               <ul>
+                <li className="nav-item">
+                  <Link className="text-decoration-none" to="/">
+                    Home
+                  </Link>
+                </li>
                 {menus.map((menu, index) => (
                   <li className="nav-item" key={index}>
-                    <Link className="text-decoration-none" to={menu.link}>
+                    <a
+                      className="text-decoration-none"
+                      target="_blank"
+                      rel="noreferrer"
+                      href={menu.link}
+                    >
                       {menu.name}
-                    </Link>
+                    </a>
                   </li>
                 ))}
                 <li>
@@ -81,11 +87,21 @@ const Menu = () => {
               <Offcanvas.Body>
                 <nav id="mobile-nav">
                   <ul className="mobile-nav-ul">
+                    <li className="nav-item">
+                      <Link className="text-decoration-none" to="/">
+                        Home
+                      </Link>
+                    </li>
                     {menus.map((menu, index) => (
                       <li className="nav-item" key={index}>
-                        <Link className="text-decoration-none" to={menu.link}>
+                        <a
+                          className="text-decoration-none"
+                          target="_blank"
+                          rel="noreferrer"
+                          href={menu.link}
+                        >
                           {menu.name}
-                        </Link>
+                        </a>
                       </li>
                     ))}
 

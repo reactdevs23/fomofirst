@@ -1,38 +1,78 @@
-import React from 'react';
-import './Hero.css'
+import React, { useState } from "react";
+import { AiOutlineCheck } from "react-icons/ai";
+import { HiArrowRight } from "react-icons/hi";
+import styles from "./styles.module.css";
 
 const Hero = () => {
-    return (
-        <section id='hero'>
-            <div className="container">
-                <div className='hero-contents d-flex flex-column-reverse flex-md-row align-items-center'>
-                    <div className='hero-left-side'>
-                        <h1 className='get-smarter-text '>Get smarter about <br /></h1>
-                        <h1 className='get-smarter-text'><span className='nft-text m-0'>Your NFTs</span> <span className='investment-text m-0'></span></h1>
+  const [email, setEmail] = useState("");
+  const data = [
+    { text: "The 3-2-1 Thursday newsletter ", timePeriod: "Weekly" },
+    {
+      text: "Discount and offers on my books and products",
+      timePeriod: "A few times per year",
+    },
+    {
+      text: "Free subscriber-exclusive resources  ",
+      timePeriod: "A few times per year",
+    },
+  ];
+  const subsCribeFunction = (e) => {
+    e.preventDefault();
+  };
+  return (
+    <section className={styles.privilegeContainer}>
+      <div className={`${styles.privilege} `}>
+        <div className={styles.textContainer}>
+          <h4 className={styles.title}>
+            Creating is a privilege but it's also a gift
+          </h4>
+          <p className={styles.text}>
+            Discover The Latest NFT And Metaverse News Fast, Including; Music,
+            Blockchain Gaming, NFT Avatars And Collectibles, Fashion, Sport And
+            More.
+          </p>
+          <div>
+            {data.map((el, i) => (
+              <div className={styles.listItem} key={i}>
+                <span className={styles.iconContainer}>
+                  {" "}
+                  <AiOutlineCheck className={styles.icon} />
+                </span>{" "}
+                <p>
+                  {" "}
+                  {el.text}{" "}
+                  <span className={styles.timePeriod}>({el.timePeriod})</span>
+                </p>{" "}
+              </div>
+            ))}
+          </div>
+        </div>
 
-                        <p className='newsletter-text'>Get a <b>FREE Magazine</b> + weekly newsletter to join <br className='d-none d-lg-block' /> edge in the NFT market</p>
-
-                        <div className='d-flex justify-content-between align-items-center hero-input-container'>
-                            <input className=' hero-input' type="text" placeholder='Enter email address...' />
-                            <button className='hero-input-btn'>Join Free</button>
-                        </div>
-
-                        <p className='read-by-nft-text'>Read by NFT whales from</p>
-
-
-                        <div className='hero-bottom-image-group'>
-                            <img className='w-100' src="/images/binance.png" alt="" />
-                            <img className='trust w-100' src="/images/trust.png" alt="" />
-                            <img className='w-100' src="/images/metamask.png" alt="" />
-                        </div>
-                    </div>
-                    <div className='right-side mx-auto'>
-                        <img className='d-block mx-auto' src="/images/laser-eyes.gif" alt="" />
-                    </div>
-                </div>
-            </div>
-        </section>
-    );
+        <div className={styles.contactBox}>
+          <h4 className={styles.heading}>
+            Add remarkable ideas and actionable insights to your inbox
+          </h4>
+          <form action="" className={styles.form}>
+            {" "}
+            <input
+              type="email"
+              placeholder="Your email address"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className={styles.input}
+            />
+            <button className={styles.button} onSubmit={subsCribeFunction}>
+              {" "}
+              <HiArrowRight /> Subscribe
+            </button>
+          </form>
+          <p className={styles.direction}>
+            No Span. Just The Highest Quality Ideas You'll Find On The Web
+          </p>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default Hero;
