@@ -54,7 +54,7 @@
   border-radius: 100%;
   position: absolute;
   right: 315px;
-  top: 0;
+  top: -10px;
 }
 
 .nav-subscribe-btn:hover {
@@ -110,8 +110,18 @@
 }
 
 @media (max-width: 991px) {
+  #header {
+    padding: 20px 10px;
+  }
   #header nav ul {
     gap: 20px;
+  }
+  #mobile-nav ul {
+    gap: 25px;
+  }
+  .nav-item a {
+    font-size: 17px;
+    line-height: 24px;
   }
 }
 

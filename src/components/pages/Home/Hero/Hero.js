@@ -48,7 +48,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className={styles.contactBox}>
+        <div className={`${styles.contactBox} mx-auto `}>
           <h4 className={styles.heading}>
             Add remarkable ideas and actionable insights to your inbox
           </h4>
